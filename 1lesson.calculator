@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang="en">
+ <head>
+ <meta http-equiv="Content-Type"  charset="UTF-8" />
+ //<script src ="1.js" defer></script>
+ 
+ 
+ </head>
+ <body>
+ <p>Число1:<input type="text" id="n1"></p><br/><br/>
+ <p>Число2:<input type="text" id="n2"></p>
+ 
+ <button onclick="minus()">Вычесть </button><br/>
+ <button onclick="proz()">Умножить </button><br/>
+ <button onclick="del()">Разделить </button><br/>
+ <button onclick="plus()">Сложить </button>
+  
+ <p id="out">Результат:</p>
+ 
+ <script>
+ function minus(){
+var va1,va2,result;
+ va1= document.getElementById('n1').value;
+va2=document.getElementById('n2').value;
+va2= parseInt(va2);
+ va1=parseInt(va1);
+
+ result = va1 - va2;
+document.getElementById('out').innerHTML=result;
+ }
+
+ function plus(){
+var va1,va2,result;
+va1 = document.getElementById('n1').value;
+va2 =document.getElementById('n2').value;
+va2= parseInt(va2);
+ va1=parseInt(va1);
+ result = (va1 + va2);
+
+document.getElementById('out').innerHTML=result;
+
+ }
+ function proz(){
+var va1,va2,result;
+va1= document.getElementById('n1').value;
+va2=document.getElementById('n2').value;
+result = va1*va2;
+ document.getElementById('out').innerHTML=result;
+ }
+  
+function del(){
+var va1,va2,result;
+ va1= document.getElementById('n1').value;
+va2=document.getElementById('n2').value;
+
+
+ result = va1/va2;
+ document.getElementById('out').innerHTML=result;
+ }
+  </script>
+ </body>
+</html>
