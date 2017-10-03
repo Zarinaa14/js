@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+ <head>
+ <meta http-equiv="Content-Type"  charset="UTF-8" />
+ //<script src ="1.js" defer></script>
+ <script>
+ var x = prompt(" X [-1 to 1]");
+var N = prompt("Enter N");
+function fact(n) {
+	if (n==0 || n==1) return 1;
+	else return n*factorial(n-1);
+}
+var asin = 0;
+var i;
+
+   for (i=0; i<=N; i++) {
+   arcsin = asin + ((fact(2*i))/(Math.pow(2,2*i)*Math.pow(fact(i),2)))*(Math.pow(Number(x),2*i+1)/(2*i+1))
+    }
+   console.log(asin); 
+ 
+ alert(arcsin);
+ </script>
+ 
+ </head>
+ <body>
+</body>
+</html>
