@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<script>
+
+function time(){
+	var timeNow = Date.now();
+	
+	
+	 var Finish = new Date();
+  Finish.setHours( 23);
+  Finish.setMinutes( 59);
+  Finish.setSeconds( 59);
+	
+	return Math.floor((Finish.getTime() - timeNow) / 60000);
+}
+
+
+alert("Until the end of the day in minutes " + time());
+</script>
+</body>
+</html>
