@@ -79,7 +79,7 @@ elem.print();
 })	
 console.log("Min salary: ");
 var MinSalary =  Math.min.apply(Math, ArraySalary);
-var NameMinSalary =	Account.mas.filter(function(elem){
+var NameMinSalary = Account.mas.filter(function(elem){
  return elem.salary==MinSalary;
 	})
 NameMinSalary.forEach(function(elem){
@@ -93,20 +93,53 @@ Account.Average();
 //console.log(Account.mas);
 
 	//Account.Average();
+	Account.inform_departments=function(){
 var men =[]	;
 var Depart = [];
 	Account.mas.forEach(function(elem){
 		Depart.push(elem.department);
 	})
-	for (var i = 0; i < Depart.push.length; i++) {
-	var dep=Depart.filter(function(elem,index){
+	
+	var NovDepart=Depart.filter(function(elem,index){
 		return Depart.indexOf(elem)==index;
-	});
-	Sum = men.reduce(function(prev, curr){ 
+		});
+	for (var i = 0; i < NovDepart.length; i++) 	{
+	var worker = Account.mas.filter(function(element){
+			return element.department==NovDepart[i];
+		})
+	}
+	
+	DepartSummaAge = worker.reduce(function(prev, curr){ 
 			return prev + curr.age; 
 		}, 0); 
+		Suma = worker.reduce(function(prev, curr){ 
+			return prev + curr.salary; 
+		}, 0); 
+		var Averegesalary=Math.floor((Suma/worker.length)*50)/50;
+		var AverageAge=Math.floor((DepartSummaAge/worker.length)*50)/50;
+		var max_exp=worker[0].exp;
+		var index_max_exp=0;
+		for (var e = 0; e < worker.length; e++) {
+			if (worker[e].exp > max_exp) {
+    			Max_exp = worker[e].exp;
+    			index_max_exp = e;
+  			}
+		}
+		console.log("The full salary  is "+Suma);
+		console.log(" ");
+		
+		console.log("The total amount of salaries: "+Averegesalary);
+		console.log(" ");
+		console.log("Number of worker: "+worker.length);
+		console.log(" Average age: "+AverageAge);
+		console.log("More experienced "+worker[index_max_exp].name);
+		
 }	
+	
 Account.Add("Nikita");
+Account.inform_departments();
+Account.Average();
+Account.del();
     
 	
 
