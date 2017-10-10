@@ -1,0 +1,115 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+
+<script>
+var Account = {
+};
+var Mas = [
+	{
+		name: "Victor", age: 27, depart: "max", exp: 7, salary: 900
+	},
+	{
+		name: "Masa", age: 19, depart: "min", exp: 3, salary: 400
+	},
+	{
+		name: "Nikita", age: 22, depart: "middle", exp: 4, salary: 750
+	},
+	{
+		name: "Sveta", age: 19, depart: "min", exp: 1, salary: 350
+	}
+]
+ Mas.forEach(function(elem){
+	elem.print = function(){
+		console.log("name: " + this.name + ";  Age: " + this.age + ";  depart: " + this.depart + ";  exp: " + this.exp + ";  salary: " + this.salary );
+		console.log(" ");
+		
+	}
+})
+Account.mas = Mas;
+Account.Add=function(people){
+	if (typeof(people)=="object") {
+		arr.push(people);
+		Accoun.mas=arr;
+		people.print = function(){
+			console.log("name: " + this.name + ";  Age: " + this.age + ";  depart: " + this.depart + ";  exp: " + this.exp + ";  salary: " + this.salary);
+		}
+		console.log("Add worker");
+		Account.mas.forEach(function(elem){
+			elem.print();
+		})
+		
+}}		
+
+Account.del = function (el){
+if(typeof(el)=='string' ){
+Account.mas[Account.mas.length]!= el;
+console.log(Account);
+}
+}
+
+
+
+Account.sortSalary = function(){
+	Account.mas.sort(function(a, b){
+		return a.salary > b.salary? 1: -1;
+	});
+	Account.mas.forEach(function(elem){
+		elem.print();
+	})
+}
+Account.sortSalary();
+
+//Account.sumSal();	
+Account.Average = function(){
+var ArraySalary = [];
+	Account.mas.forEach(function(elem){
+		ArraySalary.push(elem.salary);	
+})	
+var MaxSalary =  Math.max.apply(Math, ArraySalary);
+var NameMaxSalary =	Account.mas.filter(function(elem){
+ return elem.salary==MaxSalary;
+	})
+	console.log("Max salary: ");
+NameMaxSalary.forEach(function(elem){
+elem.print();    
+})	
+console.log("Min salary: ");
+var MinSalary =  Math.min.apply(Math, ArraySalary);
+var NameMinSalary =	Account.mas.filter(function(elem){
+ return elem.salary==MinSalary;
+	})
+NameMinSalary.forEach(function(elem){
+elem.print();    
+})
+
+
+}
+Account.Average();	
+
+//console.log(Account.mas);
+
+	//Account.Average();
+var men =[]	;
+var Depart = [];
+	Account.mas.forEach(function(elem){
+		Depart.push(elem.department);
+	})
+	for (var i = 0; i < Depart.push.length; i++) {
+	var dep=Depart.filter(function(elem,index){
+		return Depart.indexOf(elem)==index;
+	});
+	Sum = men.reduce(function(prev, curr){ 
+			return prev + curr.age; 
+		}, 0); 
+}	
+Account.Add("Nikita");
+    
+	
+
+</script>
+</body>
+</html>
