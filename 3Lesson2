@@ -90,7 +90,7 @@ elem.print();
 }
 Account.Average();	
 
-//console.log(Account.mas);
+
 
 	//Account.Average();
 	Account.inform_departments=function(){
