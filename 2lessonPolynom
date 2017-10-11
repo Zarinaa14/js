@@ -4,23 +4,22 @@
 <meta charset="utf-8">
 </head>
 <body>
-
 <script>
-var arr = [25, 21, 7, 0, 5, 11];
-    var x = prompt("Enter x");
-function Polynomial(arr, x){
-	var result = 0, 
-	
-	for(var i = 0; i < arr.length; i++){
-		result += arr[i] * Math.pow(x, i);
-	}
-
-	      return result;
+var N1 = prompt("N");
+var arr1 = new Array;
+for(var i=0; i<=N1; i++ ){
+	arr1[i]=Math.floor(Math.random()*(100)+50);
 }
-
-var result = Polynomial(arr, x);
-alert("Polynomial = " + result);
-
-</script>
+function polynomial(arr2,x){
+	var sum=0;
+for(var i=0; i<=arr.length - 1; i++){
+       sum=sum+arr2[i]*Math.pow(x,i);
+	}
+return(sum);
+}
+var x = prompt("x");
+	alert(arr1);
+	alert(polynomial(arr1,x));
+</script>	
 </body>
 </html>
