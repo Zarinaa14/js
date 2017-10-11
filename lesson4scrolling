@@ -28,7 +28,7 @@
 <script type="text/javascript">
 var height = 0;
 var at = 0;
-var intS = 0;
+var i = 0;
 function scroll() {
 console.log("hight:" + height + " scrollHeight:" + document.body.scrollHeight + " att:" + at  );
 
