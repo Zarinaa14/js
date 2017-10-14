@@ -7,8 +7,8 @@ var result = new Array();
 for (var i = 0; i<=12; i++){
 //result[i]=set
 result[i] = new Object();
-result[i].Name = N[Math.floor(Math.random()*8)];
-result[i].City = M[Math.floor(Math.random()*8)];
+result[i].Name = N[Math.floor(Math.random()*12)];
+result[i].City = M[Math.floor(Math.random()*12)];
 result[i].Age  =  Math.floor(Math.random()*60);
 result[i].Print =  function(){
             console.log("Name: " + this.Name + " City: " + this.City + " Age: " + this.Age);
