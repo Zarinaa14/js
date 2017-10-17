@@ -1,0 +1,15 @@
+var N1 = prompt("N");
+var arr1 = new Array;
+for(var i=0; i<=N1; i++ ){
+	arr1[i]=Math.floor(Math.random()*(100)+50);
+}
+function polynomial(arr2,x){
+	var sum=0;
+for(var i=0; i<=arr.length - 1; i++){
+       sum=sum+arr2[i]*Math.pow(x,i);
+	}
+return(sum);
+}
+var x = prompt("x");
+	alert(arr1);
+	alert(polynomial(arr1,x));

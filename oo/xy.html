@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<button id = "top">top</button>
+ 
+ <p class ="text">
+ Массив – разновидность объекта, которая предназначена для хранения пронумерованных значений и предлагает дополнительные методы для удобного манипулирования такой коллекцией.
+
+Они обычно используются для хранения упорядоченных коллекций данных, например – списка товаров на странице, студентов в группе и т.п.
+Массив – разновидность объекта, которая предназначена для хранения пронумерованных значений и предлагает дополнительные методы для удобного манипулирования такой коллекцией.
+
+Они обычно используются для хранения упорядоченных коллекций данных, например – списка товаров на странице, студентов в группе и т.п.
+Массив – разновидность объекта, которая предназначена для хранения пронумерованных значений и предлагает дополнительные методы для удобного манипулирования такой коллекцией.
+
+Они обычно используются для хранения упорядоченных коллекций данных, например – списка товаров на странице, студентов в группе и т.п.
+Массив – разновидность объекта, которая предназначена для хранения пронумерованных значений и предлагает дополнительные методы для удобного манипулирования такой коллекцией.
+
+Они обычно используются для хранения упорядоченных коллекций данных, например – списка товаров на странице, студентов в группе и т.п.
+ </p>
+  <span id="xy">yy</span>
+ <style>
+ .text{
+ width:50px;
+ 
+ 
+ }
+ .top {
+ position:fixed;
+ 
+ top:30px;
+ right:30px;
+ }
+ </style>
+ 
+ 
+ 
+ 
+<script type="text/javascript">
+ns4 = (document.layers)? true:false
+ie4 = (document.all)? true:false
+
+function init() {
+    if (ns4) {document.captureEvents(Event.MOUSEMOVE);}
+    document.onmousemove=mousemove;
+}
+function mousemove(event) {
+    var mouse_x = y = 0;
+    if (document.attachEvent != null) {
+        mouse_x = window.event.clientX;
+        mouse_y = window.event.clientY;
+    } else if (!document.attachEvent && document.addEventListener) {
+        mouse_x = event.clientX;
+        mouse_y = event.clientY;
+    }
+    status="x = " + mouse_x + ", y = " + mouse_y;
+    document.getElementById('xy').innerHTML = "x = " + mouse_x + ", y = " + mouse_y;
+}
+init();
+var height = 15;
+var attempt = 4;
+var intS = 0;
+function scrollToEndPage() {
+console.log("hight:" + height + " scrollHeight:" + document.body.scrollHeight + " att:" + attempt  );
+
+if (height < document.body.scrollHeight)
+{
+    //height = document.body.scrollHeight;
+    window.scrollTo(0, height);
+    attempt++;
+    height = parseInt(height) + attempt;
+}
+else
+{
+    clearInterval(intS);
+}
+}
+intS = setInterval(scrollToEndPage,100);
+
+
+
+document.getElementById('top').onclick = function(){
+setTimeout(function() {scrollToEndPage( height, attempt ) }, 100);
+scrolled=window.pageYOffset;
+scrollToTop();
+
+}
+var scrolled;
+var timer;
+function scrollToTop(){
+if (scrolled=0){
+window.scrollTo(650,scrolled);
+scrolled =scrolled - 100;
+timer=setTimeout(scrollToTop,100);
+}
+else {
+clearTimeout(timer);
+window.scrollTo(650,0);
+}
+}
+</script>
+</script>
+</body>
+</html>
