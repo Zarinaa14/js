@@ -1,6 +1,6 @@
 document.write("<table>");
-var n =parseInt( prompt(' число  n?'));
-var m =parseInt( prompt(' число  m?'));
+var n =parseInt( prompt(' число  n '));
+var m =parseInt( prompt(' число  m '));
 
 for (var i = 1; i <= n; i++ ) 
 {
