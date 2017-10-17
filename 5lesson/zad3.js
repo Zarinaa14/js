@@ -1,11 +1,13 @@
 document.write("<table>");
+var n = prompt('Введите n');
+var m = prompt('Введите m');
 
-for (var i = 1; i <= 9; i++ ) 
+for (var i = 1; i <= n; i++ ) 
 {
 	document.write("<tr>");
 	document.write("<td width=15px>" + i + "</td>");
 
-	for ( var j = 2; j <= 9; j++ ) 
+	for ( var j = 2; j <=m ; j++ ) 
 	{
 		document.write("<td>" + i * j + "</td>");
 
