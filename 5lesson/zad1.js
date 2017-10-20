@@ -1,6 +1,8 @@
 //Таймер задается с постоянным промежутком времени. что это значит???
-function ff()
-{
+var num;
+num=[Math.floor(Math.random() * 2000 )+1950];
+
+setInterval(function(){
  
  	var names = ["Roma", "Dasha", "Vika","Katya","Olya","Igor","Stepa","Misha","Lyba","Lyda","Nikita"];
  var cities = ["Baranovichi", "Polotsk", "Novopolotsk", "Vitebsk", "Mogilev"];
@@ -26,9 +28,5 @@ function ff()
 	sum.innerText =  'summa :' + h.sum;
 	kol.innerText =  'количество :' + h.kol;
 	
-	setTimeout(ff,2000);
-}
-
- 
- setTimeout(ff,2000);
+	},num);
 	
