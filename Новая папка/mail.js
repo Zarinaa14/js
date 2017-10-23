@@ -4,8 +4,8 @@ function Init () {
 }
 function checkEmail(e) {
    // var  e=document.getElementById("email").value;
-    if ((e.keyCode == 189) ||(e.keyCode == 64) || ((e.keyCode > 45) && (e.keyCode < 47)) || ((e.keyCode > 47) && (e.keyCode < 58)) || ((e.keyCode > 96) && (e.keyCode < 123)) || ((e.keyCode > 64) && (e.keyCode < 91))){
-	 //	document.getElementById("email_error").innerHTML="  Enter the E-mail!"; 
+    if ((e.keyCode == 189) ||(e.keyCode == 64) || ((e.keyCode >= 45) && (e.keyCode < 47)) || ((e.keyCode > 47) && (e.keyCode < 58)) || ((e.keyCode >= 95) && (e.keyCode < 123)) || ((e.keyCode > 64) && (e.keyCode < 91))){ 
+// document.getElementById("email_error").innerHTML=" Enter the E-mail!"; 
 }
 	else{
 		e.preventDefault();
@@ -14,3 +14,4 @@ function checkEmail(e) {
 	}
 }
 Init();
+
