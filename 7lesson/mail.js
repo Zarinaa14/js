@@ -4,7 +4,7 @@ function Init () {
 }
 function checkEmail(e) {
    // var  e=document.getElementById("email").value;
-    if ((e.charCode==46)||((e.charCode>49)&(e.charCode<58))||((e.charCode>65)&(e.charCode<91))||((e.charCode>98)&(e.charCode<123))){
+    if ((e.keyCode == 189) ||(e.keyCode == 64) || ((e.keyCode > 45) && (e.keyCode < 47)) || ((e.keyCode > 47) && (e.keyCode < 58)) || ((e.keyCode > 96) && (e.keyCode < 123)) || ((e.keyCode > 64) && (e.keyCode < 91))){
 	 //	document.getElementById("email_error").innerHTML="  Enter the E-mail!"; 
 }
 	else{
