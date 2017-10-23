@@ -1,6 +1,6 @@
 var FrameWork = {
 	append: function(e1, e2){
-		return el1.appendChild(e2);
+		return e1.appendChild(e2);
 	}
 	
 	,prepend: function(e1, e2){
