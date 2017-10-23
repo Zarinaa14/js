@@ -1,12 +1,40 @@
-var str = Array();
-tab = ["window.history"," Value","window.location", "Value ", "window.novigator"," Value", "window.screen"," Value", "window", " Value", ".go(delta)" ," Перейти на страницу истории посещений, находящуюся на позиции delta относительно текущей. ",".href","  URL", ".appCodeName", "Кодовое имя браузера ",  ".width", " Ширина  активного экрана", ".screenX", " Определяет y-координату указателя относительно экрана в момент возникновения события", ".forward"," Перейти на следующую страницу, как если бы посетитель нажал на кнопку браузера Вперед", ".hash", "Часть URL, которая идет после символа решетки '#', включая символ '#'", ".appName", "Имя браузера ", ".height", "Высота  активного экрана", ".screenY", " Предназначен для получения количества пикселей, на которые документ был прокручен в горизонтальном направлении относительного левого верхнего угла окна",       ".back()", "Перейти на предыдущую страницу, как если бы посетитель нажал на кнопку браузера Назад. ",  ".host", " Xост", ".cookieEnabled" , "Включена ли поддержка cookie ", ".availHeight", " высота рабочей области экрана в пикселях (исключая высоту панели задач", ".scrollX" ," 	прокрутка документа по вертикали", ".length", " Количество URL которые хранятся в History", ".port"," порт", " javaEnabled()", " Включена ли поддержка Java в браузере", "availWidth ", "Битовая глубина цветовой палитры ",  " .scrollBy(x,y)", "  Метод scrollBy прокручивает содержимое окна на указанное количество пикселей.", " "," "," .protocol", " Протокол","online "," онлайн ли пользователь",".colorDepth", "Текущая ориентация экрана"," .innerWidth", "Ширина рабочей области окна "," "," ", " search", " устанавливает или возвращает часть URL, содержащей строку с параметрами", " .userAgent","Заголок user-agent содержит исчерпывающую информацию о браузере пользователя. ", ".orientation()", "Кодовое имя браузера "," .open()", "открывает в новом окне  "," "," ",".reload() ", " перезагружает ресурс из текущего URL"," "," "," "," ",".print()", " печатает текущую страницу"," "," "," "," "," "," "," "," ",".close()"," закрывает текущее  окно "," "," "," "," "," "," "," "," "," ScreenLeft", " отступ слева, измеряется в пикселах относительно родительского элемента."," "," "," "," "," "," "," "," ",".screenTop ", " отступ сверху, измеряется в пикселах относительно родительского элемента."," "," "," "," "," "," "," "," ",".scrollY ", " прокрутка документа по горизонтали"," "," "," "," "," "," "," "," ", ".innerHeight","Высота рабочей области окна ",];
-
-document.write('<table border="2">')
-for (i=0; i<13; i++) {
-    document.write('<tr>')
-    for (j=0; j<10; j++) {
-        document.write('<td>'+tab[10*i+j]+'</td>')
-    }
-    document.write('</tr>')
+ var arrinfo = ["Имя браузера:<br>navigator.appName", 
+	       "Ширина экрана:  ", 
+		   "Высота экрана: ",
+		   "высота рабочей области экрана в пикселях (исключая высоту панели задач):<br>screen.availHeight", 
+		   "Ширина активного экрана:<br>screen.availWidth", 
+		   "Битовая глубина цветовой палитры:<br>screen.colorDepth",
+		   "Текущая ориентация экрана:<br>screen.orientation.type", 
+		   "Кодовое имя браузера:<br>navigator.appCodeName", 
+           "Включена ли поддержка cookie?<br>navigator.cookieEnabled", 
+		   "Включена ли поддержка Java в браузере?<br>navigator.javaEnabled", 
+		   " online?<br>navigator.onLine",
+		   "Полная информация о браузере:<br>navigator.userAgent",
+		   "Перейти на указанную n-ую URL в списке посещенных страниц:",
+		   "Перейти на следующую страницу, как если бы посетитель нажал на кнопку браузера Вперед:",
+		   "Перейти на предыдущую страницу, как если бы посетитель нажал на кнопку браузера Назад:",
+		   "Количество URL которые хранятся в History:<br>history.length",
+		   "Часть URL, которая идет после символа решетки '#', включая символ '#':<br>location.hash",
+		   "Xост и порт:<br>location.host","Весь URL:<br>location.href",
+		   "Hомер порта:<br>location.port","Протокол:<br>location.protocol",
+		   "Часть адреса после символа ?, включая символ ?:<br>location.search",
+		   "Перезагрузить документ по текущему UR:",
+		   "Загрузить документ по данному url:",
+		   "Определяет x-координату указателя относительно экрана в момент возникновения события:<br>screenX/screenLeft",
+		   "Определяет y-координату указателя относительно экрана в момент возникновения события:<br>screenY/screenTop",
+		   "прокрутка документа по горизонтали относительного левого верхнего угла окна:<br>scrollX",
+		   " прокрутка документа по вертикали относительного левого верхнего угла окна:<br>scrollY",
+		   "Метод прокручивает страницу относительно текущих координат:",
+		   "Метод прокручивает страницу к указанным координатам относительно документа:",
+		   "Метод закрывает указанное окно:",
+		   "Ширина рабочей области окна:<br>innerWidth",
+		   "Высота рабочей области окна:<br>innerHeight",
+		   "открывает в новом окне:",
+		   "печатает текущую страницу:"]; 
+var arr2 = [ navigator.appName, screen.width, screen.height, screen.availHeight, screen.availWidth, screen.colorDepth, screen.orientation.type, navigator.appCodeName, navigator.cookieEnabled, navigator.javaEnabled,navigator.onLine,navigator.userAgent,
+"history.go()","history.forward()","history.back()",history.length,location.hash,location.host,location.href,location.port,location.protocol,location.search,"location.reload()","location.assign()",screenX, screenY,scrollX,scrollY,"scrollBy(x,y)","scrollTo(pageX,pageY)",
+"close()",innerWidth,innerHeight,"open()","print()"]; 
+document.write("<table border='1'><tr><th>Property</th><th>Result</th></tr>"); 
+for (var i = 0; i < arrinfo.length; i++){ 
+	document.write("<tr><th width='55%'><p>" + arrinfo[i] + "<p></th><th width='40%'><p>" + arr2[i] + "</p></th></tr>"); 
 }
-document.write('</table>')
