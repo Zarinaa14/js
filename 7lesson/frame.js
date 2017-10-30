@@ -52,3 +52,36 @@ var FrameWork = {
 		}
 	}
 }
+var Frame8 = {
+	width: function(e)
+	{
+		return e.scrollWidth;
+		
+	}
+	height: function(e)
+	{
+		return  e.scrollHeight;
+		
+	}
+	pageTop: function(e)
+	{
+		var rect = e.getBoundingClientRect();
+		return rect.top;
+		
+	}
+	pageTop: function(e)
+	{
+		var rect = e.getBoundingClientRect();
+		return rect.left;
+		
+	}
+	
+	css: function getStyle(el, prop) {
+  if (document.defaultView && document.defaultView.getComputedStyle) {
+    return document.defaultView.getComputedStyle(el, null)[prop];
+  } else if (el.currentStyle) {
+    return el.currentStyle[prop];
+  } else {
+    return el.style[prop];
+  }
+}
