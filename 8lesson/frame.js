@@ -11,7 +11,30 @@ var FrameWork = {
 	}
 	,create: function(name){
 		return document.createElement(name);
+	},
+	width: function(e){
+        var result = e.getBoundingClientRect();
+        return result.height;
+	},
+	height: function(e){
+        var rect = e.getBoundingClientRect();
+        return rect.height
+    },
+	PageTop: function(e){
+        return elem.clientTop
+    },
+	PageLeft: function(e){
+        return elem.clientLeft
+    },
+	css: function(el.prop.value) {
+		if(arguments.length == 3)
+			el.style[prop] = value;
+		else 
+			  return window.getComputedStyle(el)[prop];
+		
 	}
+	
+	
 	
 	,Get: {
 		byId: function(id){
@@ -51,37 +74,4 @@ var FrameWork = {
 			typeof addEventListener == "function" ? elem.dispatchEvent(new Event(type)) : elem.fireEvent('on' + type, new Event(type));
 		}
 	}
-}
-var Frame8 = {
-	width: function(e)
-	{
-		return e.scrollWidth;
-		
-	}
-	height: function(e)
-	{
-		return  e.scrollHeight;
-		
-	}
-	pageTop: function(e)
-	{
-		var rect = e.getBoundingClientRect();
-		return rect.top;
-		
-	}
-	pageTop: function(e)
-	{
-		var rect = e.getBoundingClientRect();
-		return rect.left;
-		
-	}
-	
-	css: function getStyle(el, prop) {
-  if (document.defaultView && document.defaultView.getComputedStyle) {
-    return document.defaultView.getComputedStyle(el, null)[prop];
-  } else if (el.currentStyle) {
-    return el.currentStyle[prop];
-  } else {
-    return el.style[prop];
-  }
 }
