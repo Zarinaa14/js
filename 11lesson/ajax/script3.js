@@ -30,21 +30,21 @@ var settings =  {
 var change = function(){
 	if(settings[location.hash].handler == null){
 		var path = settings[location.hash].path;
-		// var xhr = new XMLHttpRequest();
-		// xhr.open("GET",path,true);
-		// xhr.onload = function(){
-			// div.innerHTML = this.responseText;
-    // }
+		 var xhr = new XMLHttpRequest();
+		 xhr.open("GET",path,true);
+		 xhr.onload = function(){
+			 div.innerHTML = this.responseText;
+     }
     }
-    // else{
-     // var path = settings[location.hash].path;
-	  // var xhr = new XMLHttpRequest();
-	  // xhr.open("GET",path,true);
-	  // xhr.onload = settings[location.hash].handler;
+     else{
+      var path = settings[location.hash].path;
+	   var xhr = new XMLHttpRequest();
+	   xhr.open("GET",path,true);
+	   xhr.onload = settings[location.hash].handler;
 
-    // }
-	// xhr.send(null);
-// }
+     }
+	 xhr.send(null);
+ }
 window.onhashchange = function(){
 	change();
 }
