@@ -36,7 +36,10 @@ var FrameWork = {
 	ajax = function (m,p,f){
         var xhr = new  XMLHttpRequest();
         xhr.open(m , p ,true);
-		xhr.onload = f;
+		xhr.onload = function(){
+			t = this.responseText;
+			f(t);
+		}
         xhr.send();
    
 }
