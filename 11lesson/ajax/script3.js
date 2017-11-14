@@ -8,8 +8,8 @@ var settings =  {
 
 		handler: function(){
 			div.innerHTML = this.responseText;
-			var input = document.getElementsByTagName('input')[0];
-		    var bt = document.getElementsByTagName('button')[0];
+			var input = document.getElementByIdName('input');
+		    var bt = document.getElementsById('but');
 		    bt.addEventListener('click',function(){
 			alert(input.value);
 			})
@@ -31,10 +31,10 @@ var change = function(){
 	if(settings[location.hash].handler == null){
 		var path = settings[location.hash].path;
 		 var xhr = new XMLHttpRequest();
-		 xhr.open("GET",path,true);
-		 xhr.onload = function(){
-			 div.innerHTML = this.responseText;
-     }
+		  xhr.open("GET",path,true);
+		  xhr.onload = function(){
+			  div.innerHTML = this.responseText;
+      }
     }
      else{
       var path = settings[location.hash].path;
